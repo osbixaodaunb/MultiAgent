@@ -10,7 +10,9 @@ import jade.util.leap.ArrayList;
 public class ReceiverAgent extends Agent {
 	private ArrayList itemsGraph = new ArrayList();
 	int [] data;
+	boolean setVisible = false;
 	int i;
+	int a = 0;
 	JFrame f = new JFrame();
 
 	protected void setup() {
@@ -28,14 +30,19 @@ public class ReceiverAgent extends Agent {
 					for(i = 0; i < itemsGraph.size() - 1; i++){
 						System.out.println(itemsGraph.get(i));
 						data[i] = (int)itemsGraph.get(i);
+						a++;
 					}
-				
-					if(i<300){
-						f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-						f.add(new GraphingData(data));
-						f.setSize(400,400);
-						f.setLocation(200,200);
-						f.setVisible(true);
+					
+					f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+					f.add(new GraphingData(data));
+					f.setSize(400,400);
+					f.setLocation(200,200);
+					f.setVisible(true);
+					try {
+						Thread.sleep(700);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
 					}
 					
 				}else {
