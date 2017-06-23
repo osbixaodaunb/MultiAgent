@@ -30,7 +30,7 @@ public class InsertAgent extends Agent{
 				    int value = randomNumber.nextInt(100);
 				    String valueToBeInserted = Integer.toString(value);
 				    valueToBeInserted = valueToBeInserted + "\n";
-				    fw.write(valueToBeInserted);//appends the string to the file
+				    //fw.write(valueToBeInserted);//appends the string to the file
 				    fw.close();
 				}
 				catch(IOException ioe)
