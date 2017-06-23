@@ -8,39 +8,40 @@ import java.util.Random;
 import jade.util.leap.ArrayList;
 
 public class Database {
-	private ArrayList contents;
+
+	private ArrayList array = new ArrayList();
 	
 	public Database(String nameFile) throws IOException{
 		readFile(nameFile);
 	}
 	
-	public ArrayList getContents(){
-		return this.contents;
-	}
-	
 	private void readFile(String nameFile) throws IOException{
 		BufferedReader br = new BufferedReader(new FileReader(nameFile));
+
 		try {
-		    StringBuilder sb = new StringBuilder();
+
+
 		    String line = br.readLine();
 
 		    while (line != null) {
+			    StringBuilder sb = new StringBuilder();
 		        sb.append(line);
 		        sb.append(System.lineSeparator());
+		        array.add(sb.toString());
+
 		        line = br.readLine();
 		    }
-		    String everything = sb.toString();
-		    contents.add(everything);
-		} finally {
+		    
+		}catch ( NullPointerException e){
 		    br.close();
 		}
 	}
 	
 	public String getRandomElement(){
+	
 		Random randomGenerator = new Random();
-		int contentsLength = contents.size();
-		int indexGenerated = randomGenerator.nextInt(contentsLength);
-		String actualContent = (String) contents.get(indexGenerated);
+		int indexGenerated = randomGenerator.nextInt(array.size()-1);
+		String actualContent = (String) array.get(indexGenerated);
 		return actualContent;
 	}
 	

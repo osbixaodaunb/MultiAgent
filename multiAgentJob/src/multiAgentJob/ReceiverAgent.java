@@ -15,6 +15,7 @@ public class ReceiverAgent extends Agent {
 				if (msg != null) {
 					//mensagem recebida
 					msg.getContent(); //conteúdo da mensagem
+					System.out.println(msg.getContent());
 				}else {
 					block();
 				}

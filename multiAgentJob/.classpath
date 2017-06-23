@@ -5,7 +5,5 @@
 	<classpathentry kind="lib" path="/Users/geovannioliveiradejesus/Desktop/jade/jade/lib/jade.jar"/>
 	<classpathentry kind="lib" path="/Users/geovannioliveiradejesus/Desktop/jade/jade 3/lib/jadeExamples.jar"/>
 	<classpathentry kind="lib" path="/Users/geovannioliveiradejesus/Desktop/jade/jade 4/lib/commons-codec/commons-codec-1.3.jar"/>
-	<classpathentry kind="lib" path="/home/harrison/Downloads/Jade/jade (5)/lib/commons-codec/commons-codec-1.3.jar"/>
-	<classpathentry kind="lib" path="/home/harrison/Downloads/Jade/jade/lib/jade.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
