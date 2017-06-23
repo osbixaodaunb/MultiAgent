@@ -11,7 +11,7 @@ public class ReaderAgent extends Agent{
 	Database database;
 	
 	protected void setup() { 
-		addBehaviour(new OneShotBehaviour() {
+		addBehaviour(new CyclicBehaviour() {
 			
 			public void action() {
 				
@@ -27,6 +27,8 @@ public class ReaderAgent extends Agent{
 				
 				ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
 				String dados = database.getRandomElement();
+				//int value = Integer.parseInt(dados);
+				//System.out.println(dados);
 				msg.setContent(dados);
 				msg.addReceiver(new AID("receiverAgent",AID.ISLOCALNAME));
 				send(msg);

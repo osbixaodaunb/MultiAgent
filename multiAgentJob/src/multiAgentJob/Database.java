@@ -26,7 +26,7 @@ public class Database {
 		    while (line != null) {
 			    StringBuilder sb = new StringBuilder();
 		        sb.append(line);
-		        sb.append(System.lineSeparator());
+		        //sb.append(System.lineSeparator());
 		        array.add(sb.toString());
 
 		        line = br.readLine();
